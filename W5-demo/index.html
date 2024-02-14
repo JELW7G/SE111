@@ -155,7 +155,7 @@
 
                     <!--right column - answers/inputs-->
                     <td>
-                        <input type="radio" name="study" id="study1" value="SE">Software Engineering <br>
+                        <input type="radio" name="study" id="study1" value="SE"><label for="study1">Software Engineering</label> <br>
                         <input type="radio" name="study" id="study2" value="WB">Web Development <br>
                         <input type="radio" name="study" id="study3" value="CYB">Cybersecurity <br>
                         <input type="radio" name="study" id="study4" value="NE">Networking
@@ -176,6 +176,65 @@
                     <!--right column - answers/inputs-->
                     <td>
                         <textarea name="comments" id="comments" placeholder="Open the gym earlier!" rows="6" cols="20" maxlength="140"></textarea>
+                    </td>
+
+                </tr>
+                                <!--new row-->
+
+                <!--CHECKBOXES - allow for multiple responses-->
+
+                <!--they require a label for EACH CHECKBOX OPTION-->
+
+                <tr>
+
+                    <!--left column (labels)-->
+
+                    <td>
+
+                        <!--since the checkboxes each have their own label, we will NOT include a for value here-->
+
+                        <label>Select Your Vehicle(s):</label>
+
+                    </td>
+
+                    <!--right column (inputs)-->
+
+                    <td>
+
+                        <input type="checkbox" name="vehicle1" id="vehicle1" value="car">
+
+                        <label for="vehicle1">Car</label>
+
+                        <br>
+
+                        <input type="checkbox" name="vehicle2" id="vehicle2" value="motorcycle">
+
+                        <label for="vehicle2">Motorcycle</label>
+
+                        <br>
+
+                        <input type="checkbox" name="vehicle3" id="vehicle3" value="bike">
+
+                        <label for="vehicle3">Bicycle</label>
+
+                        <br>
+
+                        <input type="checkbox" name="vehicle4" id="vehicle4" value="roci">
+
+                        <label for="vehicle4">The Rocinante</label>
+
+                        <br>
+
+                        <input type="checkbox" name="vehicle5" id="vehicle5" value="roach">
+
+                        <label for="vehicle5">Roach the Horse</label>
+
+                        <br>
+
+                        <input type="checkbox" name="vehicle6" id="vehicle6" value="dragon">
+
+                        <label for="vehicle6">Dragon!</label>
+
                     </td>
 
                 </tr>
