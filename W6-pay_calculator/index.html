@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joseph Lopez">
+    <meta name="description" content="Pay Calculator Home Page">
+    <title>Week 6 | JavaScript Pay Calculator</title>
+</head>
+<body>
+    <!--Main Header-->
+    <h1>W6 | JavaScript Pay Calculator</h1>
+
+    <script>
+        var gross_pay = "0"
+        var net_pay = "0"
+        var taxed_amount = "0"
+        var tax_rate = "0.2"
+
+        var hourly_pay = Number(prompt(`Hello! Please enter your hourly rate here: $`))
+        var hours_worked = Number(prompt(`Please enter the number of hours you have worked here: `))
+
+        gross_pay = (hourly_pay * hours_worked).toFixed(2)
+
+        taxed_amount = (gross_pay * tax_rate).toFixed(2)
+
+        net_pay = (gross_pay - taxed_amount).toFixed(2)
+
+        alert(`Gross Pay: $ ${gross_pay} \nUncle Sam's Share: $${taxed_amount} \nNet Pay: $${net_pay}`)
+
+        console.log(`Gross Pay: $${gross_pay}`)
+        console.log(`Uncle Sam's Share: $${taxed_amount}`)
+        console.log(`Net Pay: $${net_pay}`)
+
+    </script>
+
+</body>
+</html>
