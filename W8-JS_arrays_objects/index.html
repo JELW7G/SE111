@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 8 | Homework Assignment</title>
+	<meta name="author" content="Joseph Lopez">
+	<meta name="description" content="W8 JavaScript Arrays and Objects | Home Page">
 </head>
 <body>
 
@@ -23,27 +25,31 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><input id="button" type="button" value="submit"></td>
+				<td><input id="submit" type="submit" value="submit"></td>
 			</tr>
 		</table>
 	<div>
-	<div id="output">
+	<div id="result">
 	
 	</div>
 
-	<!--The script tag should go after the HMTL, but inside of the body.-->
+	<!--The script tag should go after the HTML, but inside of the body.-->
 	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
     <script>
 	
 		//Store the elements (tags) in variables
-		
+		var header = document.querySelector(`#header`)
+		var first = document.getElementById(`first`)
+		var last = document.getElementById(`last`)
+		var submit = document.querySelector(`#submit`)
+		var result = document.querySelector(`#result`)
 
 		//Make an array to store the people
-		
+		var people = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
-		
+		submit.addEventListener("click", calcAndDisplay)
+
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
 		Then will bubble sort the array and print each person to the screen.
@@ -67,16 +73,14 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-
-
+				first: first.value,
+				last: last.value
 
             }//end of person object
-
-
-
+			console.log(person)
 
 			//Add the person object into the people array by using the .push() array method.
-			
+			people.push(person)
 
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
@@ -93,13 +97,14 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
+			console.log(people)
 			
 
 			//create a variable called 'output' that has an empty string value stored to 
-			
+			var output = ""
 
 			//Loop through the objects in the people array
-			for()
+			for(let i = 0; i < people.length; i++)
             {
 
 				//Loop through each property in the object
@@ -109,18 +114,19 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-				
+					output += `<p><b>${key.toUpperCase()}</b>: ${people[i][key]}</p>`
 
                 }
-                //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+                //add a <hr> to the output at the end of this outer loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
+				output += `<hr>`
 
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
-				
+			console.log(output)
+			result.innerHTML = output
 
 
 
